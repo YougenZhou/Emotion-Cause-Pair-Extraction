@@ -50,7 +50,7 @@ def main(args):
     torch.manual_seed(args.random_seed + args.rank)
 
     if args.phase == 'train':
-        train_set = DocumentDataset()
+        train_set = DocumentDataset(phase=args.phase)
 
 
 if __name__ == '__main__':
